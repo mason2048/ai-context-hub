@@ -4,7 +4,7 @@
 
 ## 1. Install and start
 
-Install Node.js 20.19+ or 22.12+, then run:
+Install Node.js 20.19+ or 22.12+ and npm 11.11.0+, then run:
 
 ```sh
 git clone https://github.com/mason2048/ai-context-hub.git

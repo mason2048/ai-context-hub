@@ -23,6 +23,8 @@ jobs:
         with:
           node-version: 22.12.0
           cache: npm
+      - name: Pin npm
+        run: npm install --global npm@11.11.0
       - name: Install locked dependencies
         run: npm ci --ignore-scripts
       - name: Run tests

@@ -8,7 +8,7 @@ Version `0.1.0` is a **source preview**. It is not a hosted service and a succes
 
 ## Quick start
 
-Requirements: Node.js 20.19+ or 22.12+ and npm.
+Requirements: Node.js 20.19+ or 22.12+ and npm 11.11.0+.
 
 ```sh
 git clone https://github.com/mason2048/ai-context-hub.git

@@ -8,7 +8,7 @@ AI Context Hub 是一个本地优先的 AI 上下文审查工作台。它以只�
 
 ## 快速开始
 
-需要 Node.js 20.19+ 或 22.12+，以及 npm。
+需要 Node.js 20.19+ 或 22.12+，以及 npm 11.11.0+。
 
 ```sh
 git clone https://github.com/mason2048/ai-context-hub.git

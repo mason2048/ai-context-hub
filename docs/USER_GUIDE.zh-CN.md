@@ -4,7 +4,7 @@
 
 ## 1. 安装与启动
 
-安装 Node.js 20.19+ 或 22.12+，然后执行：
+安装 Node.js 20.19+ 或 22.12+ 和 npm 11.11.0+，然后执行：
 
 ```sh
 git clone https://github.com/mason2048/ai-context-hub.git
