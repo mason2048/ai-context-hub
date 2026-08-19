@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.context-hub.dev/context-package-v0.1.schema.json",
+  "title": "Context Package v0.1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schemaVersion", "packageId", "name", "kind", "createdAt", "producer", "items", "warnings"],
+  "properties": {
+    "schemaVersion": { "const": "0.1" },
+    "packageId": { "type": "string", "format": "uuid" },
+    "name": { "type": "string", "minLength": 1 },
+    "kind": { "enum": ["repository", "web", "memory", "rule", "mixed"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "producer": {
+      "type": "object",
+      "required": ["name", "version"],
+      "properties": { "name": { "type": "string" }, "version": { "type": "string" } }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["id", "type", "title", "content", "scope", "source", "validity", "sensitivity", "tags"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "type": { "enum": ["fact", "instruction", "preference", "workflow", "reference", "secret-warning"] },
+          "title": { "type": "string" },
+          "content": { "type": "string" },
+          "scope": { "enum": ["global", "project", "task"] },
+          "source": {
+            "type": "object",
+            "required": ["uri", "revision", "locator"],
+            "properties": {
+              "uri": { "type": "string" },
+              "revision": { "type": "string", "minLength": 1 },
+              "locator": { "type": "string", "minLength": 1 }
+            }
+          },
+          "validity": {
+            "type": "object",
+            "required": ["observedAt", "expiresAt", "confidence"],
+            "properties": {
+              "observedAt": { "type": "string", "format": "date-time" },
+              "expiresAt": { "type": ["string", "null"], "format": "date-time" },
+              "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+            }
+          },
+          "sensitivity": { "enum": ["public", "internal", "sensitive", "secret"] },
+          "tags": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "warnings": { "type": "array" }
+  }
+}

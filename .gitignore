@@ -1,0 +1,36 @@
+node_modules/
+dist/
+coverage/
+.context-hub-data/
+*.tsbuildinfo
+*.log
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# Tooling, test, and OS output
+.DS_Store
+.idea/
+.vscode/
+.cache/
+.nyc_output/
+playwright-report/
+test-results/
+*.tgz
+*.app/
+*.dmg
+
+# The ignored node_modules rule is an intentional scanner fixture. Keep only
+# this one inert text file while excluding every real dependency directory.
+!sample-project/node_modules/
+sample-project/node_modules/*
+!sample-project/node_modules/ignored-rule/
+!sample-project/node_modules/ignored-rule/AGENTS.md

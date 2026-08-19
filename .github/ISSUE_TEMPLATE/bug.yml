@@ -1,0 +1,41 @@
+name: Bug report
+description: Report a reproducible, non-sensitive problem.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include credentials, private project content, local absolute paths, signing material, or vulnerabilities. Use Private Vulnerability Reporting for security issues.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Problem
+      description: What happened, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Use a synthetic project and redact all personal paths and content.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Revision or version
+      placeholder: commit SHA or 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: macOS 15, Node 22.12.0, npm 10
+    validations:
+      required: true
+  - type: textarea
+    id: checks
+    attributes:
+      label: Verification output
+      description: Summarize npm test and npm run build without sensitive data.

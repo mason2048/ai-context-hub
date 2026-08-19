@@ -1,0 +1,28 @@
+name: Feature request
+description: Propose a scoped improvement to the local-first source preview.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: Describe the workflow problem, not only a preferred implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Include acceptance evidence and privacy or security constraints.
+    validations:
+      required: true
+  - type: dropdown
+    id: boundary
+    attributes:
+      label: Does it preserve local-first, read-only scanning?
+      options:
+        - "Yes"
+        - "No or unsure"
+    validations:
+      required: true

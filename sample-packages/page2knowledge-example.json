@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "0.1",
+  "packageId": "5f3df4e3-30bf-4d9a-9951-29bf446a61ec",
+  "name": "Page2Knowledge 示例包",
+  "kind": "web",
+  "createdAt": "2026-08-12T00:00:00.000Z",
+  "producer": {
+    "name": "page2knowledge",
+    "version": "0.1.0"
+  },
+  "items": [
+    {
+      "id": "fact-local-first",
+      "type": "fact",
+      "title": "本地优先原则",
+      "content": "用户文件默认留在本机；任何外发都必须经过明确确认。",
+      "scope": "global",
+      "source": {
+        "uri": "https://example.test/context/local-first",
+        "revision": "sha256:3bfa14a7ad87f2301fd188815f0807919653ec492fbea1441df16dfb1b1b7cf8",
+        "locator": "main > section:nth-of-type(1)"
+      },
+      "validity": {
+        "observedAt": "2026-08-12T00:00:00.000Z",
+        "expiresAt": null,
+        "confidence": 0.98
+      },
+      "sensitivity": "public",
+      "tags": ["privacy", "local-first"],
+      "futureItemField": "导入方必须忽略这个未知字段"
+    },
+    {
+      "id": "reference-review-boundary",
+      "type": "reference",
+      "title": "验收证据边界",
+      "content": "本地测试通过只能证明本地候选行为，不等于生产发布或下游采用。",
+      "scope": "project",
+      "source": {
+        "uri": "https://example.test/context/evidence-boundary",
+        "revision": "2026-08-12T00:00:00.000Z",
+        "locator": "article#evidence-boundary"
+      },
+      "validity": {
+        "observedAt": "2026-08-12T00:00:00.000Z",
+        "expiresAt": "2027-08-12T00:00:00.000Z",
+        "confidence": 0.9
+      },
+      "sensitivity": "public",
+      "tags": ["evidence", "review"]
+    }
+  ],
+  "warnings": [
+    "这是用于本地导入验收的虚构公开示例，不代表真实网页内容。"
+  ],
+  "futureTopLevel": {
+    "acceptedByForwardCompatibleReaders": true
+  }
+}
